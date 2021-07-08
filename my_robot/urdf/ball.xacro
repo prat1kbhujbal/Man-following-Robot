@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+
+<robot name="ball"
+    xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find my_robot)/urdf/ball.gazebo" />
+    <!-- root link, on the ground just below the model origin -->
+    <link name="base_footprint_ball">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <box size="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="base_link_joint" type="fixed">
+        <origin xyz="0.0 0 0" rpy="0 0 0" />
+        <parent link="base_footprint_ball"/>
+        <child link="base_link_man" />
+    </joint>
+
+    <link name="base_link_man">
+        <inertial>
+            <mass value="50" />
+            <origin xyz="0 0 -1.25" />
+            <inertia ixx="50.0" ixy="0.0" ixz="0.0" iyy="50.0" iyz="0.0" izz="50.0" />
+        </inertial>
+        <visual>
+            <geometry>
+                <mesh filename="package://my_robot/meshes/walk.dae"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0.0" />
+            <geometry>
+                <cylinder length="2.15" radius="0.25" />
+            </geometry>
+        </collision>
+    </link>
+
+</robot>

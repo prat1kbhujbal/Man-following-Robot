@@ -1,0 +1,15 @@
+<launch>
+
+    <arg name="node_start_delay" default="1.0" />
+
+    <!-- The drive_bot node -->
+    <node name="drive_bot" type="drive_bot" pkg="drive_man" output="screen" launch-prefix="bash -c 'sleep $(arg node_start_delay); $0 $@' " />
+
+    <!-- The process_image node -->
+    <node name="process_image" type="process_image" pkg="drive_man" output="screen">
+    </node>
+
+    <!-- The drive_man node -->
+    <node name="drive_man" type="drive_man" pkg="drive_man" output="screen">
+    </node>
+</launch>

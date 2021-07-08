@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<robot>
+    <gazebo reference="camera">
+        <material>Gazebo/White</material>
+    </gazebo>
+    <gazebo>
+        <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+            <commandTopic>man/cmd_vel</commandTopic>
+            <odometryTopic>man/odom</odometryTopic>
+            <odometryFrame>base_footprint_ball</odometryFrame>
+            <odometryRate>10.0</odometryRate>
+            <robotBaseFrame>base_footprint_ball</robotBaseFrame>
+        </plugin>
+    </gazebo>
+
+</robot>
