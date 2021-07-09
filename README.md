@@ -9,8 +9,8 @@ In this example first it moves to Table-1 in the gazebo world (i.e. Machinery la
 
 ## Software Requirements
 
-1. Ubuntu 18.04
-2. ROS Melodic
+1. Ubuntu 16.04
+2. ROS Kinetic
 
 ## Build and Complie
 
@@ -42,3 +42,9 @@ There are three basic function in **class** -
 You can choose from above functions in class to move man around gazebo world
 
 ## Output
+* When running the `drive_man.launch` you will get message as shown
+![](images_and_videos/output.png)
+
+
+### Demo video
+![caption](images_and_videos/demo.gif)
