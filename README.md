@@ -19,7 +19,7 @@ To create a new workspace faby_ws, open a terminal and run the following command
 ``` bash
 mkdir -p ~/robot_ws/src
 cd ~/robot_ws/src/
-https://github.com/Prat33k-dev/Man-following-Robot.git
+git clone https://github.com/Prat33k-dev/Man-following-Robot.git
 cd ..
 catkin_make
 source devel/setup.bash
